@@ -1,12 +1,28 @@
 import Nav from "./components/Nav";
-import Header from "./components/Header";
+import { Main } from "./components/Main";
+import Menu from "./components/Menu";
 import "./App.css"
+import Footer from "./components/Footer";
+import { Route, Routes } from "react-router-dom";
+import About from "./components/About";
+import OrderOnline from "./components/OrderOnline";
+import CustomerDetails from "./components/CustomerDetails";
+import Login from "./components/Login";
 
 function App() {
   return (
    <>
    <Nav/>
-   <Header/>
+   <Main/>
+   <Routes>
+        <Route path="/about" element={<About />} />
+        <Route path="/orderOnline" element={<OrderOnline />} />
+        <Route path="/customer-details" element={<CustomerDetails />} />
+        <Route path="/login" element={<Login />} />
+
+    </Routes>
+   <Menu/>
+   <Footer/>
    </>
   );
 }
