@@ -166,7 +166,11 @@ const OrderOnline = () => {
                     )}
                     {cart.length > 0 && <button onClick={handleCheckout} className="checkout-button">Checkout</button>}
                 </section>  
-
+                <section>
+                    <div className='TC'>
+                        T&C apply. Only popular menu items availabe since it is a booking based website
+                    </div>
+                </section>
                 
             </main>
 

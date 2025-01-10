@@ -36,6 +36,7 @@
   display: flex;
   gap: 25px; 
   list-style: none;
+  z-index: 10000;
 }
 
 .nav-links li {
@@ -333,6 +334,9 @@ footer ul li a:hover{
   text-align: center;
   padding: 2rem;
 }
+.order-online p{
+  margin-bottom: 20px;
+}
 
 .order-online-menu-items {
   display: flex;
@@ -514,6 +518,11 @@ footer ul li a:hover{
     padding: 0.5rem;
     border: 1px solid #ddd;
     border-radius: 5px;
+}
+.TC{
+  text-align: center;
+  padding-top: 30px;
+  color:#666;
 }
 
 /* Login Container */
