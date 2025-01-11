@@ -25,12 +25,12 @@ export const BookingForm = (props) => {
                 <fieldset>
                     <div>
                         <label htmlFor='Book-Date'>Choose the Date</label>
-                         <input id = "Book-Date" type="date" value = {date} onChange={(e)=> handleChange(e.target.value)} />
+                         <input id = "Book-Date" type="date" value = {date} onChange={(e)=> handleChange(e.target.value)} required/>
                     </div>
 
                     <div>
                         <label htmlFor='Book-Time'>Choose the Time</label>
-                        <select id = "Book-Time" value = {time} onChange={(e)=> setTime(e.target.value)}>
+                        <select id = "Book-Time" value = {time} onChange={(e)=> setTime(e.target.value)} required>
                             <option value="">Select the Time</option>
                             {
                                 props.availableTimes.availableTimes.map((availableTimes)=> {
@@ -42,14 +42,14 @@ export const BookingForm = (props) => {
 
                     <div>
                     <label htmlFor='Book-Guest'>Number of guests</label>
-                    <input id = "Book-Guest" placeholder="0" min='1' value = {guest} onChange={(e)=> setGuest(e.target.value)} />
+                    <input required id = "Book-Guest" placeholder="0" min='1' value = {guest} onChange={(e)=> setGuest(e.target.value)} />
                     </div>
 
                     <div>
 
                     <label htmlFor='Book-Occasion'>Choose the Occasion</label>
 
-                    <select id = "Book-Occasion" value = {occasion} onChange={(e)=> setOccasion(e.target.value)}>
+                    <select id = "Book-Occasion" value = {occasion} onChange={(e)=> setOccasion(e.target.value)} required>
                        <option value="">Choose an Occasion</option>
                        <option value="Birthday">Birthday</option>
                        <option value="Anniversary">Anniversary</option>
